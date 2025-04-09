@@ -63,7 +63,7 @@ const Portfolio = () => {
               <a href="./index.html">
                 <img src={logo} alt="" />
               </a>
-              <p>
+              <p className="mb-0">
                 UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart"></i>
               </p>
             </div>

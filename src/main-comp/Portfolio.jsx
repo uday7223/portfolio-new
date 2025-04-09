@@ -1,9 +1,33 @@
-import React from "react";
+import React, { useRef } from "react";
 import logo from "../assets/logo.jpg";
 import kandalaProject from "../assets/kandalaJews.png";
 import RoyaleKitchenProject from "../assets/royaleKitchen.png";
+import emailjs from 'emailjs-com';
 
 const Portfolio = () => {
+
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+    
+        emailjs.sendForm(
+          'service_huog5b6',
+          'template_18astu8',
+          form.current,
+          'GYtIIFDERyr7IMhqU'
+        )
+        .then((result) => {
+          alert('Message sent successfully!');
+          form.current.reset(); // Clear the form
+        }, (error) => {
+          alert('Failed to send message, please enter a valid email address!');
+          console.error(error.text);
+        });
+      };
+
+
+
   const skills = [
     "HTML",
     "CSS",
@@ -58,19 +82,19 @@ const Portfolio = () => {
     <>
       <div className="main-con">
         <div className="bg-1">
-          <header>
-            <div className="head-left">
-              <a href="./index.html">
+          <header className="    w-100">
+            <div className="head-left justify-content-start col-md-4 col-lg-4 col-sm-4 col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center">
+              <a href="/">
                 <img src={logo} alt="" />
               </a>
               <p className="mb-0">
                 UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart"></i>
               </p>
             </div>
-            <div className="head-right">
+            <div className="head-right justify-content-center d-flex col-md-8 col-lg-8 col-sm-8 col-xl-8 col-xxl-8" >
               <ul>
                 <li>
-                  <a href="#">HOME</a>
+                  <a href="/">HOME</a>
                 </li>
                 <li>
                   <a href="#about">ABOUT</a>
@@ -92,7 +116,7 @@ const Portfolio = () => {
               data structures, algorithms. Aspiring to pursue a career in
               software engineering, harnessing a diverse skill set.
             </div>
-            <button className="button">PROJECTS</button>
+            <button className="button" onClick={() => window.location = '#projects'}>PROJECTS</button>
           </div>
           <div className="bg-1-social">
             {socialMediaLinks.map((link, index) => (
@@ -126,7 +150,7 @@ const Portfolio = () => {
                 I'm a <span>Frontend Focused Web Developer</span> building and
                 managing the Front-end of Websites and Web Applications that
                 leads to the success of the overall product. Check out some of
-                my work in the <span>Projects section.</span>I also like sharing
+                my work in the <span>Projects section.</span> I also like sharing
                 content related to the stuff that I have learned over the years
                 in <span>Web Development</span> so it can help other people of
                 the Dev Community. Feel free to Connect or Follow me on my
@@ -151,7 +175,7 @@ const Portfolio = () => {
               </section>
             </div>
           </div>
-          {/* <button className="btn btn1">CONTACT</button> */}
+          <button className="btn mt-3" onClick={() => window.location = '#contact'} >CONTACT</button>
         </div>
 
         <div className="bg-3">
@@ -226,21 +250,20 @@ const Portfolio = () => {
               get back to you as soon as possible.
             </div>
           </div>
-
-          <div className="contact">
-            <input type="text" placeholder="Name" />
-            <input type="text" placeholder="Email" />
-            <input type="text" placeholder="Phone Number" />
-            <input type="text" placeholder="Message" />
-            <button className="btn">SEND</button>
-          </div>
+<form className="contact" ref={form} onSubmit={sendEmail}>
+        <input type="text" name="name" placeholder="Name" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="text" name="phone" placeholder="Phone Number" maxLength="10" />
+        <textarea className="pt-2" name="message" placeholder="Message" maxLength={150} required />
+        <button type="submit" className="btn">SEND</button>
+      </form>
         </div>
 
         <footer>
           <div className="con1">
             <div className="content">
               <div className="heading">UDAY KUMAR N</div>
-              <div className="text">
+              <div className="text pe-5 me-5">
                 A Frontend focused Web Developer building the Frontend of
                 Websites and Web Applications that leads to the success of the
                 overall product
@@ -250,57 +273,18 @@ const Portfolio = () => {
           <div className="con2">
             <div className="content">
               <div className="heading">SOCIAL</div>
+
               <div className="bg-1-social">
-                <div className="social">
-                  <a
-                    href="https://www.linkedin.com/in/udaykumar-n-83907a230/"
-                    target="_blank"
-                  >
-                    <i
-                      className="fa-brands fa-linkedin"
-                      style={{ color: "white" }}
-                    ></i>
+            {socialMediaLinks.map((link, index) => (
+              <div key={index} className="social">
+                {link.url && (
+                  <a href={link.url} target="_blank">
+                    <i className={link.icon} style={{ color: "white" }}></i>
                   </a>
-                </div>
-                <div className="social">
-                  <a href="https://github.com/uday7223" target="_blank">
-                    <i
-                      className="fa-brands fa-github"
-                      style={{ color: "white" }}
-                    ></i>
-                  </a>
-                </div>
-                <div className="social">
-                  <a
-                    href="https://www.instagram.com/omfg_its_uday/"
-                    target="_blank"
-                  >
-                    <i
-                      className="fa-brands fa-square-instagram"
-                      style={{ color: "white" }}
-                    ></i>
-                  </a>
-                </div>
-                <div className="social">
-                  <a href="" target="_blank">
-                    <i
-                      className="fa-brands fa-square-x-twitter"
-                      style={{ color: "white" }}
-                    ></i>
-                  </a>
-                </div>
-                <div className="social">
-                  <a
-                    href="https://www.youtube.com/channel/UCOwD3tDeafAGYw3dT8imHIg"
-                    target="_blank"
-                  >
-                    <i
-                      className="fa-brands fa-youtube fa-xs"
-                      style={{ color: "white" }}
-                    ></i>
-                  </a>
-                </div>
+                )}
               </div>
+            ))}
+          </div>
             </div>
           </div>
         </footer>

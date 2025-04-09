@@ -1,3 +1,5 @@
+@import "./mediaQueries.scss";
+
 * {
   padding: 0;
   margin: 0;
@@ -66,33 +68,34 @@ header {
       width: 50px;
       height: 50px;
       border-radius: 50%;
-      transition: transform 0.1s ease-out;
+    //   transition: transform 0.1s ease-out;
 
       &:hover {
-        transform: scale(1.02);
-        box-shadow: 1px 1px 14px 0px white;
+        // transform: scale(1.02);
+        transition: all 0.2s ease-in-out;
+        box-shadow: 1px 1px 20px 0px white;
       }
     }
 
-    &:hover {
-      transform: scale(1.05);
-    }
+    // &:hover {
+    //   transform: scale(1.05);
+    // }
   }
 
   .head-left,
   .head-right {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    
   }
 
   .head-left {
-    margin-left: 5rem;
+    // margin-left: 5rem;
     gap: 2rem;
   }
 
   .head-right {
-    margin-left: 28rem;
+    // margin-left: 28rem;
 
     ul,
     .anchor {
@@ -181,7 +184,8 @@ header {
     }
 
     > div i:hover {
-      transform: scale(1.05);
+      transform: scale(1.07);
+      transition: all 0.2s ease-in-out;
     }
   }
 }
@@ -202,7 +206,7 @@ header {
 }
 
 .bg-2 {
-  height: 100vh;
+//   height: 70vh;
 
   > button {
     display: block;
@@ -334,6 +338,19 @@ header {
     padding: 0 15px;
   }
 
+  textarea{
+    height: 50px;
+    margin: 16px;
+    font-size: 18px;
+    width: auto;
+    border: none;
+    border-bottom: 1px solid #060606;
+    margin-bottom: 40px;
+    color: black;
+    padding: 0 15px;
+
+  }
+
   > button {
     display: block;
     margin: 0 auto;
@@ -342,14 +359,14 @@ header {
 
 footer {
   display: flex;
-  height: 50vh;
+  height: 40vh;
   background-color: black;
   color: white;
 
   .con1,
   .con2 {
     width: 45%;
-    padding: 50px;
+    padding: 5rem 4rem;
 
     .heading {
       font-size: 24px;
@@ -373,6 +390,20 @@ footer {
 
       .social {
         margin: 0 10px;
+       
+        
+      }
+
+      .social {
+        transform: scale(2.2);
+        padding: 1rem;
+        cursor: pointer;
+      }
+  
+      > div i:hover {
+        transform: scale(1.2);
+        transition: all 0.2s linear;
+        // box-shadow: 1px 1px 10px 0px white; 
       }
     }
   }

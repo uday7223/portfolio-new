@@ -1,0 +1,63 @@
+@media screen and (max-width: 767px) {
+    .bg-1 {
+      .head-right {
+        ul {
+          gap: 1rem;
+          // Consider enabling this if needed:
+          // flex-direction: column;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 900px) {
+    .bg-1 {
+      .content {
+        width: 60% !important;
+
+        .text{
+            font-size: 20px !important;
+            margin: 10px 0px 20px 0px !important;
+        }
+        .heading {
+          font-size: 45px !important;
+          margin:  0px !important;
+        }
+      }
+  
+      .head-right {
+        ul {
+          gap: 2.5rem !important;
+        }
+      }
+  
+      .head-left {
+        gap: 0.8rem !important;
+      }
+    }
+  }
+  
+  @media screen and (min-width: 901px) and (max-width: 1100px) {
+    .bg-1 {
+      .head-right {
+        ul {
+          gap: 4rem !important;
+        }
+      }
+    }
+  }
+  
+  @media screen and (max-width: 1200px) {
+    .bg-1 {
+      .content {
+        width: 80% !important;
+      }
+    }
+  }
+  
+  // Optional: Add styles here for very small screens
+  @media screen and (max-width: 576px) {
+    // Example:
+    // .bg-1 .content { font-size: 14px; }
+  }
+  

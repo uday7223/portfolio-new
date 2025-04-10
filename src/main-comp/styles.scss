@@ -92,6 +92,16 @@ header {
   .head-left {
     // margin-left: 5rem;
     gap: 2rem;
+
+     p {
+      text-decoration: none;
+      background: linear-gradient(90deg,yellow 0%, white 100%,yellow 100%);
+      background-size: 200%;
+      background-position: -100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: background-position 0.5s ease-in-out;
+        }
   }
 
   .head-right {
@@ -106,16 +116,22 @@ header {
       margin-bottom: 0 !important;
     }
 
-    ul li a {
+    ul li a{
       text-decoration: none;
-      color: white !important;
+      background: linear-gradient(90deg, yellow 0%, white 100%, yellow 0%);
+      background-size: 200%;
+      background-position: -100%;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: background-position 0.4s ease-in-out;
     }
   }
 
-  .head-left:hover,
+  .head-left p:hover,
   .head-right ul li a:hover {
-    text-decoration: wavy;
-    color: yellow !important;
+    // text-decoration: wavy;
+    // color: yellow !important;
+    background-position: 0%;
   }
 }
 
@@ -176,6 +192,8 @@ header {
     background: #fff;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     padding: 0.5rem;
+    border-radius: 10px;
+
 
     .social {
       transform: scale(2);
@@ -208,10 +226,12 @@ header {
 .bg-2 {
 //   height: 70vh;
 
-  > button {
-    display: block;
-    margin: 0 auto;
-  }
+
+.contact-btn{
+  position: relative;
+  left: 6.3%;
+}
+
 
   > .content > .heading,
   .heading {
@@ -233,6 +253,7 @@ header {
 .bg-2-con-2 {
   background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
   padding: 20px;
+  border-radius: 16px;
 
   .text > span {
     font-weight: 700;
@@ -311,41 +332,40 @@ header {
   img {
     width: 33rem;
     height: 18rem;
-    box-shadow: 1px 1px 18px 3px lightgreen;
+    box-shadow: 0px 0px 40px 5px rgba(0, 0, 0, 0.253);
     margin-top: 25px;
+    border-radius: 8px;
   }
 }
 
 .contact {
-  width: 34%;
+  width: 25%;
   display: flex;
   flex-direction: column;
   background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-  padding: 60px 30px;
+  padding: 60px 10px;
   border-top: 15px solid #112D4E;
   border-radius: 15px;
-  margin: 50px auto;
+  margin: 50px auto 60px;
 
   > input {
     height: 50px;
-    margin: 16px;
+    margin: 10px 35px 35px;
     font-size: 18px;
     width: auto;
     border: none;
-    border-bottom: 1px solid #060606;
-    margin-bottom: 40px;
     color: black;
     padding: 0 15px;
+    border-radius: 8px;
   }
 
   textarea{
     height: 50px;
-    margin: 16px;
+    margin: 10px 35px 45px;
     font-size: 18px;
     width: auto;
     border: none;
-    border-bottom: 1px solid #060606;
-    margin-bottom: 40px;
+    border-radius: 8px;
     color: black;
     padding: 0 15px;
 
@@ -384,9 +404,10 @@ footer {
       top: 10%;
       left: 0;
       background: black;
-      box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+      box-shadow: rgba(119, 119, 131, 0.411) 1px 1px 40px 4px;
       display: flex;
       cursor: pointer;
+      border-radius: 10px;
 
       .social {
         margin: 0 10px;
@@ -421,4 +442,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+footer .con1 .heading, .con2 .heading {
+  font-size: 24px;
+  text-align: start;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  border-bottom: 1px solid white;
 }

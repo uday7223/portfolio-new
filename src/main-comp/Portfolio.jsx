@@ -2,6 +2,7 @@ import React, { useRef } from "react";
 import logo from "../assets/logo.jpg";
 import kandalaProject from "../assets/kandalaJews.png";
 import RoyaleKitchenProject from "../assets/royaleKitchen.png";
+import geminiClone from "../assets/geminiClone.png";
 import emailjs from 'emailjs-com';
 
 const Portfolio = () => {
@@ -78,6 +79,39 @@ const Portfolio = () => {
       icon: "fa-brands fa-youtube fa-xs",
     },
   ];
+
+  const projects = [
+    {
+      title:"Gemini Functional Clone",
+      description:` Developed a fully functional Gemini clone utilizing the
+ Gemini API for backend communication. Built with React
+ for the frontend, delivering an intuitive and responsive
+ UI/UX. Integrated Gemini API to handle user queries and
+ responses in real-time, ensuring dynamic interactions.
+ Implemented chat interface and real-time updates,
+ providing a seamless user experience.`,
+ image:geminiClone,
+ link:"https://gemini-clone-p28c.onrender.com/"
+    },
+    {
+      title: "Kandalaa House of Jewellery",
+      description:
+        "Kandalaa House of Jewellery is a stunning showcase of diverse jewellery collections, crafted to highlight exquisite designs. Developed using HTML and CSS, the website offers a visually appealing and user-friendly experience for jewellery enthusiasts.",
+      image: kandalaProject,
+      link: "https://uday7223.github.io/Kandalaa-House-of-Jewellery/",
+    },
+    {
+      title: "Royale Kitchen And Brews",
+      description:
+        "Royale Kitchen And Brews is an elegant platform displaying a wide variety of food and drink options, designed to tantalize the taste buds. Developed using HTML, CSS, and JavaScript, the website offers an engaging and interactive experience for culinary enthusiasts.",
+      image: RoyaleKitchenProject,
+      link: "https://uday7223.github.io/RoyaleKitchenAndBrews/",
+    },
+  ];
+  
+
+
+
   return (
     <>
       <div className="main-con">
@@ -111,10 +145,10 @@ const Portfolio = () => {
           <div className="content">
             <div className="heading">HEY, I'M UDAY KUMAR N</div>
             <div className="text">
-              As an ambitious MCA graduate adept at problem-solving,
-              programming, and crafting clean, maintainable code. Experienced in
-              data structures, algorithms. Aspiring to pursue a career in
-              software engineering, harnessing a diverse skill set.
+            As a dedicated MCA graduate, I possess a strong foundation in web development with a passion for creating innovative
+ and user friendly web applications. I am committed to delivering high-quality, maintainable code while driving successful
+ outcomes for organization. Eager to continue my professional growth while fostering collaboration and sharing my skills
+ in web technologies.
             </div>
             <button className="button" onClick={() => window.location = '#projects'}>PROJECTS</button>
           </div>
@@ -175,70 +209,38 @@ const Portfolio = () => {
               </section>
             </div>
           </div>
-          <button className="btn mt-3" onClick={() => window.location = '#contact'} >CONTACT</button>
+          <button className="btn mt-3 contact-btn" onClick={() => window.location = '#contact'} >CONTACT</button>
         </div>
 
-        <div className="bg-3">
-          <div className="content">
-            <div className="heading-main" id="projects">
-              PROJECTS
-            </div>
-            <div className="text">
-              Here you will find some of the personal projects that I created
-              with each project containing its own live preview!
-            </div>
-          </div>
+<div className="bg-3">
+  <div className="content">
+    <div className="heading-main" id="projects">PROJECTS</div>
+    <div className="text">
+      Here you will find some of the personal projects that I created
+      with each project containing its own live preview!
+    </div>
+  </div>
 
-          <div className="project">
-            <div>
-              <img src={kandalaProject} alt="Kandalaa House of Jewellery" />
-            </div>
-            <div className="details">
-              <div className="heading project-head">
-                Kandalaa House of Jewellery
-              </div>
-              <div className="text project-text">
-                Kandalaa House of Jewellery is a stunning showcase of diverse
-                jewellery collections, crafted to highlight exquisite designs.
-                Developed using HTML and CSS, the website offers a visually
-                appealing and user-friendly experience for jewellery
-                enthusiasts.
-              </div>
-              <a
-                href="https://uday7223.github.io/Kandalaa-House-of-Jewellery/"
-                className="btn anchor"
-                target="_blank"
-              >
-                Go live
-              </a>
-            </div>
-          </div>
-
-          <div className="project">
-            <div>
-              <img src={RoyaleKitchenProject} alt="Royale Kitchen And Brews" />
-            </div>
-            <div className="details">
-              <div className="heading project-head">
-                Royale Kitchen And Brews
-              </div>
-              <div className="text project-text">
-                Royale Kitchen And Brews is an elegant platform displaying a
-                wide variety of food and drink options, designed to tantalize
-                the taste buds. Developed using HTML, CSS, and JavaScript, the
-                website offers an engaging and interactive experience for
-                culinary enthusiasts.
-              </div>
-              <a
-                href="https://uday7223.github.io/RoyaleKitchenAndBrews/"
-                className="btn anchor"
-                target="_blank"
-              >
-                Go live
-              </a>
-            </div>
-          </div>
-        </div>
+  {projects.map((project, index) => (
+    <div className="project" key={index}>
+      <div>
+        <img src={project.image} alt={project.title} />
+      </div>
+      <div className="details">
+        <div className="heading project-head">{project.title}</div>
+        <div className="text project-text">{project.description}</div>
+        <a
+          href={project.link}
+          className="btn anchor"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Go live
+        </a>
+      </div>
+    </div>
+  ))}
+</div>
 
         <div className="bg-3">
           <div className="content">
@@ -266,7 +268,7 @@ const Portfolio = () => {
               <div className="text pe-5 me-5">
                 A Frontend focused Web Developer building the Frontend of
                 Websites and Web Applications that leads to the success of the
-                overall product
+                overall product.
               </div>
             </div>
           </div>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import logo from "../assets/logo.jpg";
 import kandalaProject from "../assets/kandalaJews.png";
 import RoyaleKitchenProject from "../assets/royaleKitchen.png";
@@ -25,6 +25,12 @@ const Portfolio = () => {
           alert('Failed to send message, please enter a valid email address!');
           console.error(error.text);
         });
+      };
+
+      const [isResponsive, setIsResponsive] = useState(false);
+
+      const toggleMenu = () => {
+        setIsResponsive((prev)=> !prev);
       };
 
 
@@ -117,7 +123,7 @@ const Portfolio = () => {
       <div className="main-con">
         <div className="bg-1">
           <header className="    w-100">
-            <div className="head-left justify-content-start col-md-4 col-lg-4 col-sm-4 col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center">
+            <div className="head-left justify-content-start  col-sm-5  col-md-4 col-lg-4col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center">
               <a href="/">
                 <img src={logo} alt="" />
               </a>
@@ -125,22 +131,20 @@ const Portfolio = () => {
                 UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart"></i>
               </p>
             </div>
-            <div className="head-right justify-content-center d-flex col-md-8 col-lg-8 col-sm-8 col-xl-8 col-xxl-8" >
-              <ul>
-                <li>
-                  <a href="/">HOME</a>
-                </li>
-                <li>
-                  <a href="#about">ABOUT</a>
-                </li>
-                <li>
-                  <a href="#projects">PROJECTS</a>
-                </li>
-                <li>
-                  <a href="#contact">CONTACT</a>
-                </li>
-              </ul>
-            </div>
+            <div className={`head-right pe-5 justify-content-end d-flex  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`}>
+      <ul>
+      <li>
+          <a href="#!" className="icon" onClick={toggleMenu}>
+            <i className="fa fa-bars"></i>
+          </a>
+        </li>
+        <li><a href="/">HOME</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#projects">PROJECTS</a></li>
+        <li><a href="#contact">CONTACT</a></li>
+       
+      </ul>
+    </div>
           </header>
           <div className="content">
             <div className="heading">HEY, I'M UDAY KUMAR N</div>
@@ -171,7 +175,7 @@ const Portfolio = () => {
             <div className="heading" id="about">
               ABOUT ME
             </div>
-            <div className="text">
+            <div className="text px-5 mx-2">
               Here you will find more information about me, what I do, and my
               current skills mostly in terms of programming and technology
             </div>
@@ -212,21 +216,22 @@ const Portfolio = () => {
           <button className="btn mt-3 contact-btn" onClick={() => window.location = '#contact'} >CONTACT</button>
         </div>
 
-<div className="bg-3">
+<div className="bg-3 projects-sec  flex-column ">
   <div className="content">
     <div className="heading-main" id="projects">PROJECTS</div>
-    <div className="text">
+    <div className="text px-5 mx-2">
       Here you will find some of the personal projects that I created
       with each project containing its own live preview!
     </div>
   </div>
 
   {projects.map((project, index) => (
-    <div className="project" key={index}>
-      <div>
+    <div className="project p-0" key={index}>
+     <div className="row">
+     <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
         <img src={project.image} alt={project.title} />
       </div>
-      <div className="details">
+      <div className="details col-sm-12  col-md-12 col-lg-12 col-xl-6 col-xxl-6">
         <div className="heading project-head">{project.title}</div>
         <div className="text project-text">{project.description}</div>
         <a
@@ -238,6 +243,7 @@ const Portfolio = () => {
           Go live
         </a>
       </div>
+     </div>
     </div>
   ))}
 </div>
@@ -247,7 +253,7 @@ const Portfolio = () => {
             <div className="heading-main " id="contact">
               CONTACT
             </div>
-            <div className="text">
+            <div className="text px-5 mx-5">
               Feel free to Contact me by submitting the form below and I will
               get back to you as soon as possible.
             </div>
@@ -261,9 +267,9 @@ const Portfolio = () => {
       </form>
         </div>
 
-        <footer>
-          <div className="con1">
-            <div className="content">
+        <footer className="d-flex justify-content-center ">
+          <div className="con1  ">
+            <div className="content ">
               <div className="heading">UDAY KUMAR N</div>
               <div className="text pe-5 me-5">
                 A Frontend focused Web Developer building the Frontend of

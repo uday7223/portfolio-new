@@ -1,11 +1,16 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import logo from "../assets/logo.jpg";
 import kandalaProject from "../assets/kandalaJews.png";
 import RoyaleKitchenProject from "../assets/royaleKitchen.png";
 import geminiClone from "../assets/geminiClone.png";
 import emailjs from 'emailjs-com';
+import AOS from "aos";
 
 const Portfolio = () => {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
     const form = useRef();
 
@@ -120,10 +125,10 @@ const Portfolio = () => {
 
   return (
     <>
-      <div className="main-con">
-        <div className="bg-1">
+      <div className="main-con" >
+        <div className="bg-1" data-aos="fade-up">
           <header className="    w-100">
-            <div className="head-left justify-content-start  col-sm-5  col-md-4 col-lg-4col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center">
+            <div  data-aos="fade-right" className="head-left justify-content-start  col-sm-5  col-md-4 col-lg-4col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center">
               <a href="/">
                 <img src={logo} alt="" />
               </a>
@@ -131,7 +136,7 @@ const Portfolio = () => {
                 UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart"></i>
               </p>
             </div>
-            <div className={`head-right pe-5 justify-content-end d-flex  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`}>
+            <div className={`head-right pe-5 justify-content-end d-flex  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`} data-aos="fade-left">
       <ul>
       <li>
           <a href="#!" className="icon" onClick={toggleMenu}>
@@ -146,7 +151,7 @@ const Portfolio = () => {
       </ul>
     </div>
           </header>
-          <div className="content">
+          <div className="content"  data-aos="zoom-in">
             <div className="heading">HEY, I'M UDAY KUMAR N</div>
             <div className="text">
             As a dedicated MCA graduate, I possess a strong foundation in web development with a passion for creating innovative
@@ -156,7 +161,7 @@ const Portfolio = () => {
             </div>
             <button className="button" onClick={() => window.location = '#projects'}>PROJECTS</button>
           </div>
-          <div className="bg-1-social">
+          <div className="bg-1-social" data-aos="fade-up">
             {socialMediaLinks.map((link, index) => (
               <div key={index} className="social">
                 {link.url && (
@@ -170,7 +175,7 @@ const Portfolio = () => {
           <div className="bg-1-scroll-btn"></div>
         </div>
 
-        <div className="bg-2">
+        <div className="bg-2" data-aos="fade-up">
           <div className="content">
             <div className="heading" id="about">
               ABOUT ME
@@ -181,8 +186,8 @@ const Portfolio = () => {
             </div>
           </div>
 
-          <div className="bg-2-con">
-            <div className="bg-2-con-1">
+          <div className="bg-2-con" data-aos="fade-up">
+            <div className="bg-2-con-1" data-aos="fade-right">
               <div className="heading">Get to know me!</div>
               <div className="text">
                 I'm a <span>Frontend Focused Web Developer</span> building and
@@ -200,7 +205,7 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="bg-2-con-2">
+            <div className="bg-2-con-2" data-aos="fade-left">
               <div className="heading">My Skills</div>
               <section>
                 {skills.map((skill) => {
@@ -216,7 +221,7 @@ const Portfolio = () => {
           <button className="btn mt-3 contact-btn" onClick={() => window.location = '#contact'} >CONTACT</button>
         </div>
 
-<div className="bg-3 projects-sec  flex-column ">
+<div className="bg-3 projects-sec  flex-column " data-aos="fade-up">
   <div className="content">
     <div className="heading-main" id="projects">PROJECTS</div>
     <div className="text px-5 mx-2">
@@ -226,7 +231,7 @@ const Portfolio = () => {
   </div>
 
   {projects.map((project, index) => (
-    <div className="project p-0" key={index}>
+    <div className="project p-0" key={index} data-aos="zoom-in-up">
      <div className="row">
      <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 col-xxl-6">
         <img src={project.image} alt={project.title} />
@@ -248,9 +253,9 @@ const Portfolio = () => {
   ))}
 </div>
 
-        <div className="bg-3">
+        <div className="bg-3" data-aos="fade-up">
           <div className="content">
-            <div className="heading-main " id="contact">
+            <div className="heading-main " id="contact" >
               CONTACT
             </div>
             <div className="text px-5 mx-5">
@@ -258,7 +263,7 @@ const Portfolio = () => {
               get back to you as soon as possible.
             </div>
           </div>
-<form className="contact" ref={form} onSubmit={sendEmail}>
+<form className="contact" ref={form} onSubmit={sendEmail} data-aos="zoom-in">
         <input type="text" name="name" placeholder="Name" required />
         <input type="email" name="email" placeholder="Email" required />
         <input type="text" name="phone" placeholder="Phone Number" maxLength="10" />
@@ -267,8 +272,8 @@ const Portfolio = () => {
       </form>
         </div>
 
-        <footer className="d-flex justify-content-center ">
-          <div className="con1  ">
+        <footer className="d-flex justify-content-center " >
+          <div className="con1  " data-aos="fade-right">
             <div className="content ">
               <div className="heading">UDAY KUMAR N</div>
               <div className="text pe-5 me-5">
@@ -278,7 +283,7 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          <div className="con2">
+          <div className="con2" data-aos="fade-left">
             <div className="content">
               <div className="heading">SOCIAL</div>
 

@@ -128,7 +128,7 @@ const Portfolio = () => {
       <div className="main-con" >
         <div className="bg-1" data-aos="fade-up">
           <header className="    w-100">
-            <div  data-aos="fade-right" className="head-left justify-content-start  col-sm-5  col-md-4 col-lg-4col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center">
+            <div  data-aos="fade-right" className="head-left ps-3 justify-content-start col-xs-10  col-sm-5  col-md-4 col-lg-4col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center">
               <a href="/">
                 <img src={logo} alt="" />
               </a>
@@ -136,7 +136,7 @@ const Portfolio = () => {
                 UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart"></i>
               </p>
             </div>
-            <div className={`head-right pe-5 justify-content-end d-flex  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`} data-aos="fade-left">
+            <div className={`head-right pe-5  justify-content-end d-flex col-xs-2  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`} data-aos="fade-left">
       <ul>
       <li>
           <a href="#!" className="icon" onClick={toggleMenu}>
@@ -187,7 +187,7 @@ const Portfolio = () => {
           </div>
 
           <div className="bg-2-con" data-aos="fade-up">
-            <div className="bg-2-con-1" data-aos="fade-right">
+            <div className="bg-2-con-1 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" data-aos="fade-right">
               <div className="heading">Get to know me!</div>
               <div className="text">
                 I'm a <span>Frontend Focused Web Developer</span> building and
@@ -205,7 +205,7 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="bg-2-con-2" data-aos="fade-left">
+            <div className="bg-2-con-2 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" data-aos="fade-left">
               <div className="heading">My Skills</div>
               <section>
                 {skills.map((skill) => {

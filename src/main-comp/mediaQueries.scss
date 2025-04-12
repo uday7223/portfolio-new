@@ -568,6 +568,24 @@
 
 }
 
+@media screen and (min-width: 568px) and  (max-width: 578px) {
+  header{
+    display: flex;
+    justify-content: space-between;
+    .bg-1{
+      width: 100% !important;
+      display: flex !important;
+      .head-left{
+
+      }
+      .head-right{
+        padding-right: 0px !important;
+      }
+    }
+   }
+
+}
+
 @media screen and (max-width: 767px) {
     .bg-1 {
       .head-right {

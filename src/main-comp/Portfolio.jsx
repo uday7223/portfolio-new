@@ -137,6 +137,7 @@ const Portfolio = () => {
               </p>
             </div>
             <div className={`head-right pe-5  justify-content-end d-flex col-xs-2  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`} data-aos="fade-left">
+            {/* <div className={`head-right pe-5  justify-content-end d-flex col-xs-2  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`}> */}
       <ul>
       <li>
           <a href="#!" className="icon" onClick={toggleMenu}>
@@ -205,7 +206,8 @@ const Portfolio = () => {
               </div>
             </div>
 
-            <div className="bg-2-con-2 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" data-aos="fade-left">
+            <div className="bg-2-con-2 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" >
+            {/* <div className="bg-2-con-2 col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6" data-aos="fade-left"> */}
               <div className="heading">My Skills</div>
               <section>
                 {skills.map((skill) => {
@@ -283,7 +285,8 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          <div className="con2" data-aos="fade-left">
+          <div className="con2">
+          {/* <div className="con2" data-aos="fade-left"> */}
             <div className="content">
               <div className="heading">SOCIAL</div>
 

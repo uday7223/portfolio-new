@@ -726,6 +726,39 @@
       }
     }
 
+    .bg-2{
+      .bg-2-con {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-right: 3rem;
+        .bg-2-con-1, .bg-2-con-2{
+          width: 100% ;
+          margin: 1rem 1.5rem !important;
+
+        }
+      
+        > div {
+          width: 40%;
+          height: auto;
+        }
+      
+        .heading {
+          font-size: 28px;
+          letter-spacing: 0;
+          line-height: 42px;
+          text-align: left;
+          margin: 20px 0;
+        }
+      
+        .text {
+          font-size: 18px;
+          text-align: justify;
+        }
+      }
+    }
+
   }
   
   // Optional: Add styles here for very small screens

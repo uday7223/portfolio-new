@@ -136,8 +136,8 @@ const Portfolio = () => {
                 UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart"></i>
               </p>
             </div>
-            <div className={`head-right pe-5  justify-content-end d-flex col-xs-2  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`} data-aos="fade-left">
-            {/* <div className={`head-right pe-5  justify-content-end d-flex col-xs-2  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`}> */}
+            {/* <div className={`head-right pe-5  justify-content-end d-flex col-xs-2  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`} data-aos="fade-left"> */}
+            <div className={`head-right pe-5  justify-content-end d-flex col-xs-2  col-sm-7  col-md-8 col-lg-8col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`}>
       <ul>
       <li>
           <a href="#!" className="icon" onClick={toggleMenu}>
@@ -275,7 +275,8 @@ const Portfolio = () => {
         </div>
 
         <footer className="d-flex justify-content-center " >
-          <div className="con1  " data-aos="fade-right">
+          <div className="con1  " >
+          {/* <div className="con1  " data-aos="fade-right"> */}
             <div className="content ">
               <div className="heading">UDAY KUMAR N</div>
               <div className="text pe-5 me-5">
@@ -285,8 +286,8 @@ const Portfolio = () => {
               </div>
             </div>
           </div>
-          <div className="con2">
-          {/* <div className="con2" data-aos="fade-left"> */}
+          <div className="con2" >
+          {/* <div className="con2" data-aos="fade-right"> */}
             <div className="content">
               <div className="heading">SOCIAL</div>
 

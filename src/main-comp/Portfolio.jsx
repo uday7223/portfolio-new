@@ -3,6 +3,7 @@ import logo from "../assets/logo.jpg";
 import kandalaProject from "../assets/kandalaJews.png";
 import RoyaleKitchenProject from "../assets/royaleKitchen.png";
 import geminiClone from "../assets/geminiClone.png";
+import stocksPortfolio from "../assets/stocksPortfolio.png";
 import emailjs from 'emailjs-com';
 import AOS from "aos";
 
@@ -92,6 +93,12 @@ const Portfolio = () => {
   ];
 
   const projects = [
+    {
+    title:"Dynamic Stocks Portfolio Dashboard",
+    description:`A Next.js-powered real-time portfolio tracking dashboard that fetches live stock market data from Yahoo Finance and Google Finance. This project dynamically updates CMP, P/E Ratio, and earnings every 15 seconds, helping investors monitor stock performance efficiently.`,
+image:stocksPortfolio,
+link:"https://dynamic-stocks-portfolio-dashboard.vercel.app/"
+  },
     {
       title:"Gemini Functional Clone",
       description:` Developed a fully functional Gemini clone utilizing the

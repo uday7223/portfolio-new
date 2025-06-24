@@ -3,6 +3,7 @@ import logo from "../assets/logo.jpg";
 import kandalaProject from "../assets/kandalaJews.png";
 import RoyaleKitchenProject from "../assets/royaleKitchen.png";
 import geminiClone from "../assets/geminiClone.png";
+import zeteobit from "../assets/zeteobit.png";
 import stocksPortfolio from "../assets/stocksPortfolio.png";
 import emailjs from 'emailjs-com';
 import AOS from "aos";
@@ -94,6 +95,12 @@ const Portfolio = () => {
 
   const projects = [
     {
+  title: "ZeteoBit Business Website",
+  description: `Designed and developed a modern, responsive multi-page website for ZeteoBit, an IT solutions company. Built using HTML, CSS, and JavaScript with smooth animations and interactivity. Implemented preloader, sliders, popups, and dynamic content loading. Delivered a professional UI with mobile responsiveness and deployed the final build on Render.`,
+  image: zeteobit,
+  link: "https://zeteobit.onrender.com/" // Replace with the actual deployed link
+},    
+    {
     title:"Dynamic Stocks Portfolio Dashboard",
     description:`A Next.js-powered real-time portfolio tracking dashboard that fetches live stock market data from Yahoo Finance and Google Finance. This project dynamically updates CMP, P/E Ratio, and earnings every 15 seconds, helping investors monitor stock performance efficiently.`,
 image:stocksPortfolio,
@@ -118,13 +125,13 @@ link:"https://dynamic-stocks-portfolio-dashboard.vercel.app/"
       image: kandalaProject,
       link: "https://uday7223.github.io/Kandalaa-House-of-Jewellery/",
     },
-    {
-      title: "Royale Kitchen And Brews",
-      description:
-        "Royale Kitchen And Brews is an elegant platform displaying a wide variety of food and drink options, designed to tantalize the taste buds. Developed using HTML, CSS, and JavaScript, the website offers an engaging and interactive experience for culinary enthusiasts.",
-      image: RoyaleKitchenProject,
-      link: "https://uday7223.github.io/RoyaleKitchenAndBrews/",
-    },
+    // {
+    //   title: "Royale Kitchen And Brews",
+    //   description:
+    //     "Royale Kitchen And Brews is an elegant platform displaying a wide variety of food and drink options, designed to tantalize the taste buds. Developed using HTML, CSS, and JavaScript, the website offers an engaging and interactive experience for culinary enthusiasts.",
+    //   image: RoyaleKitchenProject,
+    //   link: "https://uday7223.github.io/RoyaleKitchenAndBrews/",
+    // },
   ];
   
 

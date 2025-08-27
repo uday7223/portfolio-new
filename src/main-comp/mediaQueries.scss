@@ -18,59 +18,30 @@
    }
 
    .contact {
-    width: 80% !important;
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    padding: 30px 10px;
-    border-top: 15px solid #112D4E;
-    border-radius: 15px;
-    margin: 30px auto 50px;
+    width: 95% !important;
+    max-width: 500px !important;
+    padding: 30px 20px !important;
+    margin: 30px auto 50px !important;
   
-    > input {
-      height: 40px;
-      margin: 10px 15px 10px;
-      font-size: 18px;
-      // width: auto;
-      width: auto;
-      min-width: 60%;
-      border: none;
-      color: black;
-      padding: 0 15px;
-      border-radius: 8px;
+    .form-group {
+      margin-bottom: 20px !important;
+  
+      input, textarea {
+        padding: 12px 15px !important;
+        font-size: 16px !important;
+        border-radius: 10px !important;
+      }
+  
+      textarea {
+        min-height: 100px !important;
+      }
     }
   
-    textarea{
-      height: 40px;
-      margin: 10px 15px 30px;
-      font-size: 18px;
-      width: auto;
-      border: none;
-      border-radius: 8px;
-      color: black;
-      padding: 0 15px;
-  
+    button {
+      padding: 12px 30px !important;
+      font-size: 16px !important;
+      min-width: 120px !important;
     }
-  
-    .btn{
-      background-color: #112D4E;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 30px;
-      max-width: 100px;
-      width: 100%;
-      height: 40px;
-      border-radius: 6px;
-      border: none;
-      color: white;
-      margin: 8px;
-      cursor: pointer;
-      transition: transform 0.1s ease-out;
-      letter-spacing: 5px;
-      display: block;
-      margin: auto ;
-    }
-
   }
 
    
@@ -78,45 +49,60 @@
   }
 
 
-  .projects-sec{
-    display: flex;
-    align-items:flex-start !important;
+  .projects-sec {
+    display: flex !important;
+    align-items: flex-start !important;
     flex-direction: column !important;
+    padding: 0 1rem !important;
     
-      .project {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 0 !important;
-    padding: 0rem 2rem !important;
-
-
-  
-    .details {
-      height: auto;
-      // width: 40%; 
+    .project {
+      display: flex !important;
+      flex-direction: column !important;
+      flex-wrap: wrap !important;
+      margin: 30px 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      
+      .details {
+        height: auto !important;
+        width: 100% !important;
+        padding: 0 1rem !important;
+        margin-top: 20px !important;
+        
+        .project-head {
+          font-size: 24px !important;
+          font-weight: 700 !important;
+          text-align: center !important;
+          margin: 15px 0 !important;
+        }
+        
+        .project-text {
+          text-align: center !important;
+          margin: 15px 0 !important;
+          font-size: 16px !important;
+          font-weight: 400 !important;
+          line-height: 1.6 !important;
+        }
+        
+        .technologies {
+          justify-content: center !important;
+          margin: 20px 0 !important;
+        }
+        
+        .btn {
+          margin: 20px auto !important;
+          max-width: 200px !important;
+        }
+      }
+      
+      img {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+      }
     }
-  
-    .project-head {
-      font-size: 28px;
-      font-weight: 700;
-      text-align: start;
-      margin: 8px;
-    }
-  
-    .project-text {
-      text-align: start;
-      margin: 8px;
-      font-size: 18px;
-      font-weight: 400;
-    }
-  
-    img {
-      width: 320px !important;
-      height: 14rem !important;
-
-    }
-  }
-  
   }
   
 
@@ -209,57 +195,29 @@
     }
    }
    .contact {
-    width: 80% !important;
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    padding: 40px 10px;
-    border-top: 15px solid #112D4E;
-    border-radius: 15px;
-    margin: 30px auto 50px;
+    width: 95% !important;
+    max-width: 500px !important;
+    padding: 30px 20px !important;
+    margin: 30px auto 50px !important;
   
-    > input {
-      height: 50px;
-      margin: 10px 15px 35px;
-      font-size: 18px;
-      // width: auto;
-      width: auto;
-      min-width: 60%;
-      border: none;
-      color: black;
-      padding: 0 15px;
-      border-radius: 8px;
+    .form-group {
+      margin-bottom: 20px !important;
+  
+      input, textarea {
+        padding: 12px 15px !important;
+        font-size: 16px !important;
+        border-radius: 10px !important;
+      }
+  
+      textarea {
+        min-height: 100px !important;
+      }
     }
   
-    textarea{
-      height: 50px;
-      margin: 10px 15px 45px;
-      font-size: 18px;
-      width: auto;
-      border: none;
-      border-radius: 8px;
-      color: black;
-      padding: 0 15px;
-  
-    }
-  
-    .btn{
-      background-color: #112D4E;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 30px;
-      max-width: 100px;
-      width: 100%;
-      height: 40px;
-      border-radius: 6px;
-      border: none;
-      color: white;
-      margin: 8px;
-      cursor: pointer;
-      transition: transform 0.1s ease-out;
-      letter-spacing: 5px;
-      display: block;
-      margin: auto ;
+    button {
+      padding: 12px 30px !important;
+      font-size: 16px !important;
+      min-width: 120px !important;
     }
   }
 
@@ -268,45 +226,60 @@
   }
 
 
-  .projects-sec{
-    display: flex;
-    align-items:flex-start !important;
+  .projects-sec {
+    display: flex !important;
+    align-items: flex-start !important;
     flex-direction: column !important;
+    padding: 0 1rem !important;
     
-      .project {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 0 !important;
-    padding: 0rem 2rem !important;
-
-
-  
-    .details {
-      height: auto;
-      // width: 40%; 
+    .project {
+      display: flex !important;
+      flex-direction: column !important;
+      flex-wrap: wrap !important;
+      margin: 30px 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      
+      .details {
+        height: auto !important;
+        width: 100% !important;
+        padding: 0 1rem !important;
+        margin-top: 20px !important;
+        
+        .project-head {
+          font-size: 24px !important;
+          font-weight: 700 !important;
+          text-align: center !important;
+          margin: 15px 0 !important;
+        }
+        
+        .project-text {
+          text-align: center !important;
+          margin: 15px 0 !important;
+          font-size: 16px !important;
+          font-weight: 400 !important;
+          line-height: 1.6 !important;
+        }
+        
+        .technologies {
+          justify-content: center !important;
+          margin: 20px 0 !important;
+        }
+        
+        .btn {
+          margin: 20px auto !important;
+          max-width: 200px !important;
+        }
+      }
+      
+      img {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+      }
     }
-  
-    .project-head {
-      font-size: 28px;
-      font-weight: 700;
-      text-align: start;
-      margin: 8px;
-    }
-  
-    .project-text {
-      text-align: start;
-      margin: 8px;
-      font-size: 18px;
-      font-weight: 400;
-    }
-  
-    img {
-      width: 360px !important;
-      height: 14rem !important;
-
-    }
-  }
-  
   }
   
 
@@ -399,57 +372,29 @@
    }
 
    .contact {
-    width: 80% !important;
-    display: flex;
-    flex-direction: column;
-    background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
-    padding: 40px 10px;
-    border-top: 15px solid #112D4E;
-    border-radius: 15px;
-    margin: 30px auto 50px;
+    width: 95% !important;
+    max-width: 500px !important;
+    padding: 30px 20px !important;
+    margin: 30px auto 50px !important;
   
-    > input {
-      height: 50px;
-      margin: 10px 15px 35px;
-      font-size: 18px;
-      // width: auto;
-      width: auto;
-      min-width: 60%;
-      border: none;
-      color: black;
-      padding: 0 15px;
-      border-radius: 8px;
+    .form-group {
+      margin-bottom: 20px !important;
+  
+      input, textarea {
+        padding: 12px 15px !important;
+        font-size: 16px !important;
+        border-radius: 10px !important;
+      }
+  
+      textarea {
+        min-height: 100px !important;
+      }
     }
   
-    textarea{
-      height: 50px;
-      margin: 10px 15px 45px;
-      font-size: 18px;
-      width: auto;
-      border: none;
-      border-radius: 8px;
-      color: black;
-      padding: 0 15px;
-  
-    }
-  
-    .btn{
-      background-color: #112D4E;
-      font-size: 15px;
-      font-weight: 700;
-      line-height: 30px;
-      max-width: 150px;
-      width: 100%;
-      height: 40px;
-      border-radius: 6px;
-      border: none;
-      color: white;
-      margin: 8px;
-      cursor: pointer;
-      transition: transform 0.1s ease-out;
-      letter-spacing: 5px;
-      display: block;
-      margin: auto ;
+    button {
+      padding: 12px 30px !important;
+      font-size: 16px !important;
+      min-width: 120px !important;
     }
   }
   
@@ -459,45 +404,60 @@
   }
 
 
-  .projects-sec{
-    display: flex;
-    align-items:flex-start !important;
+  .projects-sec {
+    display: flex !important;
+    align-items: flex-start !important;
     flex-direction: column !important;
+    padding: 0 1rem !important;
     
-      .project {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0px 0 !important;
-    padding: 0rem 2rem !important;
-
-
-  
-    .details {
-      height: auto;
-      // width: 40%; 
+    .project {
+      display: flex !important;
+      flex-direction: column !important;
+      flex-wrap: wrap !important;
+      margin: 30px 0 !important;
+      padding: 0 !important;
+      width: 100% !important;
+      
+      .details {
+        height: auto !important;
+        width: 100% !important;
+        padding: 0 1rem !important;
+        margin-top: 20px !important;
+        
+        .project-head {
+          font-size: 24px !important;
+          font-weight: 700 !important;
+          text-align: center !important;
+          margin: 15px 0 !important;
+        }
+        
+        .project-text {
+          text-align: center !important;
+          margin: 15px 0 !important;
+          font-size: 16px !important;
+          font-weight: 400 !important;
+          line-height: 1.6 !important;
+        }
+        
+        .technologies {
+          justify-content: center !important;
+          margin: 20px 0 !important;
+        }
+        
+        .btn {
+          margin: 20px auto !important;
+          max-width: 200px !important;
+        }
+      }
+      
+      img {
+        width: 100% !important;
+        max-width: 400px !important;
+        height: auto !important;
+        margin: 0 auto !important;
+        display: block !important;
+      }
     }
-  
-    .project-head {
-      font-size: 28px;
-      font-weight: 700;
-      text-align: start;
-      margin: 8px;
-    }
-  
-    .project-text {
-      text-align: start;
-      margin: 8px;
-      font-size: 18px;
-      font-weight: 400;
-    }
-  
-    img {
-      width: 400px !important;
-      height: 14rem !important;
-
-    }
-  }
-  
   }
   
 
@@ -589,48 +549,73 @@
 }
 
 @media screen and (max-width: 767px) {
-    .bg-1 {
-      .head-right {
-        ul {
-          gap: 1rem;
-          // Consider enabling this if needed:
-          // flex-direction: column;
+  header {
+    padding: 8px 15px !important;
+    
+    .head-left {
+      gap: 1rem !important;
+      
+      p {
+        font-size: 14px !important;
+        white-space: nowrap !important;
+      }
+      
+      img {
+        width: 40px !important;
+        height: 40px !important;
+      }
+    }
+    
+    .head-right {
+      ul {
+        gap: 0 !important;
+        
+        li a {
+          font-size: 14px !important;
+          padding: 10px 12px !important;
+        }
+        
+        li .icon {
+          font-size: 18px !important;
+          padding: 8px 10px !important;
         }
       }
     }
-    .bg-1 {
-
-      .bg-1-social{
-        display: none !important;
-      }
-
-      .content {
-        width: 60% !important;
-
-        .text{
-            font-size: 15px !important;
-            line-height: 1.6 !important;
-            margin: 0px 0px 20px 0px !important;
-        }
-        .heading {
-          font-size: 30px !important;
-          margin:  0px !important;
-          line-height: 1.8 !important
-        }
-      }
-  
-      // .head-right {
-      //   ul {
-      //     gap: 2.5rem !important;
-      //   }
-      // }
-  
-      .head-left {
-        gap: 0.8rem !important;
-      }
-    }
-
   }
+  
+  .bg-1 {
+    .head-right {
+      ul {
+        gap: 1rem;
+      }
+    }
+    
+    .bg-1-social {
+      display: none !important;
+    }
+
+    .content {
+      width: 90% !important;
+      padding: 0 20px !important;
+
+      .text {
+        font-size: 16px !important;
+        line-height: 1.6 !important;
+        margin: 20px 0 !important;
+      }
+      
+      .heading {
+        font-size: 32px !important;
+        margin: 20px 0 !important;
+        line-height: 1.3 !important;
+      }
+    }
+
+    .head-left {
+      gap: 0.8rem !important;
+    }
+  }
+}
 
   @media screen and (max-width:850px) {
     .bg-1 {
@@ -726,35 +711,43 @@
       }
     }
 
-    .bg-2{
+    .bg-2 {
       .bg-2-con {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        padding-right: 3rem;
-        .bg-2-con-1, .bg-2-con-2{
-          width: 100% ;
-          margin: 1rem 1.5rem !important;
-
+        display: flex !important;
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+        justify-content: space-evenly !important;
+        padding: 0 1rem !important;
+        
+        .bg-2-con-1, .bg-2-con-2 {
+          width: 100% !important;
+          margin: 1rem 0 !important;
+          padding: 20px !important;
         }
       
         > div {
-          width: 40%;
-          height: auto;
+          width: 100% !important;
+          height: auto !important;
         }
       
         .heading {
-          font-size: 28px;
-          letter-spacing: 0;
-          line-height: 42px;
-          text-align: left;
-          margin: 20px 0;
+          font-size: 24px !important;
+          letter-spacing: 0 !important;
+          line-height: 1.4 !important;
+          text-align: center !important;
+          margin: 20px 0 !important;
         }
       
         .text {
-          font-size: 18px;
-          text-align: justify;
+          font-size: 16px !important;
+          text-align: center !important;
+          line-height: 1.6 !important;
+        }
+        
+        .contact-btn {
+          position: static !important;
+          margin: 20px auto !important;
+          display: block !important;
         }
       }
     }
@@ -764,70 +757,67 @@
   // Optional: Add styles here for very small screens
   @media screen and (max-width: 992px) {
     
-    footer {
-      display: flex;
-      flex-direction: column;
-      min-height: 40vh;
-      height: auto;
-      background-color: black;
-      color: white;
-      width: 100% !important;
-    
-    
-      .con1,
-      .con2 {
-        width: auto;
-        min-width: 45%;
-        // padding: 0rem 4rem !important;
-    
-        .heading {
-          font-size: 24px;
-          text-align: start;
-          margin-bottom: 0;
-        }
-      }
-    
-      .con2 {
-        display: flex;
-        justify-content:flex-start !important;
-        padding-bottom: 3rem !important;
-    
+         footer {
+       display: flex !important;
+       flex-direction: column !important;
+       min-height: 40vh !important;
+       height: auto !important;
+       background-color: black !important;
+       color: white !important;
+       width: 100% !important;
+       padding: 0 !important;
      
-    
-        .bg-1-social {
-          position: relative;
-          top: 10%;
-          left: 0;
-          background: black;
-          box-shadow: rgba(119, 119, 131, 0.411) 1px 1px 40px 4px;
-          display: flex;
-          cursor: pointer;
-          border-radius: 10px;
-          margin-top: 0.2rem !important;
-    
-          .social {
-            margin: 0 10px;
-           
-            
-          }
-    
+       .con1,
+       .con2 {
+         width: 100% !important;
+         min-width: 100% !important;
+         padding: 2rem 1rem !important;
+         text-align: center !important;
+     
+         .heading {
+           font-size: 20px !important;
+           text-align: center !important;
+           margin-bottom: 15px !important;
+         }
+       }
+     
+       .con2 {
+         display: flex !important;
+         justify-content: center !important;
+         padding-bottom: 2rem !important;
+     
+         .bg-1-social {
+           position: relative !important;
+           top: 0 !important;
+           left: 0 !important;
+           background: black !important;
+           box-shadow: rgba(119, 119, 131, 0.411) 1px 1px 40px 4px !important;
+           display: flex !important;
+           cursor: pointer !important;
+           border-radius: 10px !important;
+           margin: 0 auto !important;
+           padding: 10px !important;
+     
+           .social {
+             margin: 0 8px !important;
+             transform: scale(1.5) !important;
+           }
+         }
+       }
+     
+       .con1 {
+         padding-top: 2rem !important;
          
-      
-         
-        }
-      }
-    
-      .con1{
-        padding-top: 2rem !important;
-        .text {
-          font-size: 1rem;
-          text-align: start;
-          line-height: 2;
-          letter-spacing: 0;
-          margin-top: 1rem !important;
-        }
-      } 
-    }
+         .text {
+           font-size: 14px !important;
+           text-align: center !important;
+           line-height: 1.6 !important;
+           letter-spacing: 0 !important;
+           margin-top: 1rem !important;
+           padding: 0 1rem !important;
+         }
+       } 
+     }
 
   }
   

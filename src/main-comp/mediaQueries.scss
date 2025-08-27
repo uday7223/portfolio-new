@@ -821,3 +821,18 @@
 
   }
   
+  // Theme toggle mobile styles
+  .theme-toggle-container {
+    margin-left: 0.5rem !important;
+  }
+  
+  .theme-toggle {
+    width: 35px !important;
+    height: 35px !important;
+    
+    svg {
+      width: 18px !important;
+      height: 18px !important;
+    }
+  }
+  

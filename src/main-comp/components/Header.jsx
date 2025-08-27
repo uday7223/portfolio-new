@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.jpg";
+import ThemeToggle from "./ThemeToggle";
 
 const Header = () => {
   const [isResponsive, setIsResponsive] = useState(false);
@@ -53,24 +54,27 @@ const Header = () => {
             UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart" aria-hidden="true"></i>
           </p>
         </div>
-        <div className={`head-right pe-5 justify-content-end d-flex col-xs-2 col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`}>
-          <ul>
-            <li>
-              <button 
-                className="icon" 
-                onClick={toggleMenu}
-                aria-label="Toggle navigation menu"
-                aria-expanded={isResponsive}
-              >
-                <i className={isResponsive ? "fa fa-times" : "fa fa-bars"} aria-hidden="true"></i>
-              </button>
-            </li>
-            <li><a href="/" aria-label="Go to homepage">HOME</a></li>
-            <li><a href="#about" aria-label="Go to about section">ABOUT</a></li>
-            <li><a href="#projects" aria-label="Go to projects section">PROJECTS</a></li>
-            <li><a href="#contact" aria-label="Go to contact section">CONTACT</a></li>
-          </ul>
-        </div>
+                 <div className={`head-right pe-5 justify-content-end d-flex col-xs-2 col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`}>
+           <ul>
+             <li>
+               <button 
+                 className="icon" 
+                 onClick={toggleMenu}
+                 aria-label="Toggle navigation menu"
+                 aria-expanded={isResponsive}
+               >
+                 <i className={isResponsive ? "fa fa-times" : "fa fa-bars"} aria-hidden="true"></i>
+               </button>
+             </li>
+             <li><a href="/" aria-label="Go to homepage">HOME</a></li>
+             <li><a href="#about" aria-label="Go to about section">ABOUT</a></li>
+             <li><a href="#projects" aria-label="Go to projects section">PROJECTS</a></li>
+             <li><a href="#contact" aria-label="Go to contact section">CONTACT</a></li>
+             <li className="theme-toggle-container">
+               <ThemeToggle />
+             </li>
+           </ul>
+         </div>
       </header>
       
       <div className="bg-1-social">

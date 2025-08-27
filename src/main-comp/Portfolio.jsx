@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import AOS from "aos";
+import { ThemeProvider } from "./context/ThemeContext";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
 import About from "./components/About";
@@ -13,7 +14,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <div className="main-con">
         <div className="bg-1" data-aos="fade-up">
           <Header />
@@ -26,7 +27,7 @@ const Portfolio = () => {
         <Contact />
         <Footer />
       </div>
-    </>
+    </ThemeProvider>
   );
 };
 

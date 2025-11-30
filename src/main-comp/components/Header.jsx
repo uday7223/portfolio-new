@@ -46,7 +46,7 @@ const Header = () => {
   return (
     <>
       <header className="w-100">
-        <div className="head-left ps-3 justify-content-start col-xs-10 col-sm-5 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center">
+        <div className="head-left ps-3 justify-content-start col-10 col-sm-5 col-md-4 col-lg-4 col-xl-4 col-xxl-4 d-flex justify-content-center align-items-center">
           <a href="/" aria-label="Go to homepage">
             <img src={logo} alt="Uday Kumar N Logo" />
           </a>
@@ -54,7 +54,7 @@ const Header = () => {
             UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart" aria-hidden="true"></i>
           </p>
         </div>
-                 <div className={`head-right pe-5 justify-content-end d-flex col-xs-2 col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`}>
+                 <div className={`head-right pe-0 pe-md-5 justify-content-end d-flex col-2 col-sm-7 col-md-8 col-lg-8 col-xl-8 col-xxl-8 ${isResponsive ? "responsive" : ""}`}>
            <ul>
              <li>
                <button 

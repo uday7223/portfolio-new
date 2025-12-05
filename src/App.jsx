@@ -1,8 +1,5 @@
 import React, { useEffect } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css';
-import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 import Portfolio from './main-comp/Portfolio';
-import "./main-comp/styles.scss"
 import { BrowserRouter, Route, Routes } from 'react-router';
 import AOS from 'aos';
 import 'aos/dist/aos.css';

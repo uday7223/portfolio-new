@@ -15,8 +15,8 @@ const Portfolio = () => {
 
   return (
     <ThemeProvider>
-      <div className="main-con">
-        <div className="bg-1" data-aos="fade-up">
+      <div className="flex flex-col relative">
+        <div className="h-screen flex flex-col items-center bg-hero-bg dark:bg-hero-bg-dark" data-aos="fade-up">
           <Header />
           <Hero />
           <div className="bg-1-scroll-btn"></div>

@@ -7,6 +7,7 @@ import About from "./components/About";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import GridBackground from "../components/react-bits/GridBackground";
 
 const Portfolio = () => {
   useEffect(() => {
@@ -15,8 +16,9 @@ const Portfolio = () => {
 
   return (
     <ThemeProvider>
-      <div className="flex flex-col relative">
-        <div className="h-screen flex flex-col items-center bg-hero-bg dark:bg-hero-bg-dark" data-aos="fade-up">
+      <div className="flex flex-col relative bg-black dark:bg-hero-bg-dark">
+        <div className="h-screen flex flex-col items-center bg-black dark:bg-hero-bg-dark relative overflow-hidden" data-aos="fade-up">
+          <GridBackground />
           <Header />
           <Hero />
           <div className="bg-1-scroll-btn"></div>

@@ -13,10 +13,10 @@ const Hero = () => {
     <div className="w-[90%] md:w-[60%] text-center my-auto px-5 md:px-0 relative z-10" data-aos="zoom-in">
       <SplitText
         text="HEY, I'M UDAY KUMAR N"
-        className="text-[32px] md:text-[40px] lg:text-[60px] font-extrabold leading-[1.3] md:leading-[1.4] lg:leading-[90px] text-center my-5 md:my-[30px] lg:my-[30px] text-text-primary dark:text-white"
+        className="text-[32px] md:text-[40px] lg:text-[60px] font-extrabold leading-[1.3] md:leading-[1.4] lg:leading-[90px] text-center my-5 md:my-[30px] lg:my-[30px] text-text-primary  text-foreground"
         delay={0.08}
       />
-      <p className="text-[16px] md:text-[20px] lg:text-[22px] font-normal leading-relaxed text-center my-5 md:my-[20px] lg:my-[30px] text-muted-foreground dark:text-gray-300">
+      <p className="text-[16px] md:text-[20px] lg:text-[22px] font-normal leading-relaxed text-center my-5 md:my-[20px] lg:my-[30px] text-muted-foreground dark:text-gray-600">
         As a dedicated MCA graduate, I possess a strong foundation in web development with a passion for creating innovative
         and user friendly web applications. I am committed to delivering high-quality, maintainable code while driving successful
         outcomes for organization. Eager to continue my professional growth while fostering collaboration and sharing my skills

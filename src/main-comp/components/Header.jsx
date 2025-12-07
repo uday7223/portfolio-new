@@ -54,7 +54,7 @@ const Header = () => {
               className="w-[50px] h-[50px] rounded-full transition-all duration-200 hover:shadow-[1px_1px_20px_0px_white]"
             />
           </a>
-          <p className="mb-0 m-0 no-underline bg-gradient-to-r from-[#112D4E] via-[#764ba2] to-[#112D4E] dark:from-[#667eea] dark:via-[#fff] dark:to-[#667eea] bg-[length:200%_auto] bg-[-100%_center] bg-clip-text text-transparent transition-[background-position] duration-500 whitespace-nowrap hover:bg-[0%_center]">
+          <p className="mb-0 m-0 no-underline text-foreground font-bold text-xl whitespace-nowrap">
             UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart" aria-hidden="true"></i>
           </p>
         </div>
@@ -68,7 +68,7 @@ const Header = () => {
                 <a
                   href={item === 'HOME' ? '/' : `#${item.toLowerCase()}`}
                   aria-label={`Go to ${item.toLowerCase()} section`}
-                  className={`no-underline bg-gradient-to-r from-[#112D4E] via-[#764ba2] to-[#112D4E] dark:from-[#667eea] dark:via-[#fff] dark:to-[#667eea] bg-[length:200%_auto] bg-[-100%_center] bg-clip-text text-transparent transition-[background-position] duration-400 px-4 py-2.5 rounded-[5px] hover:bg-[0%_center] ${isResponsive ? 'block text-center text-[16px] w-full py-4' : ''}`}
+                  className={`no-underline text-foreground font-medium px-4 py-2.5 rounded-[5px] hover:text-primary transition-colors duration-300 ${isResponsive ? 'block text-center text-[16px] w-full py-4' : ''}`}
                 >
                   {item}
                 </a>

@@ -60,19 +60,9 @@ const Header = () => {
         </div>
 
         <div className="flex-none">
-          <ul className={`list-none m-0 p-0 flex items-center gap-4 ${isResponsive
-            ? 'flex-col absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md rounded-b-[15px] shadow-[0_4px_20px_rgba(0,0,0,0.3)] py-5 z-[1000]'
+          <ul className={`list-none flex items-center gap-4 ${isResponsive
+            ? 'flex-col absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md rounded-b-[15px] shadow-[0_4px_20px_rgba(0,0,0,0.3)] py-5 pt-0 z-[1000]'
             : 'hidden md:flex'}`}>
-            <li className="md:hidden block w-full text-left">
-              <button
-                className="bg-transparent border-none text-white text-[20px] p-2.5 cursor-pointer rounded-[5px] transition-all duration-300 w-[40px] h-[40px] flex items-center justify-center z-[1001]"
-                onClick={toggleMenu}
-                aria-label="Toggle navigation menu"
-                aria-expanded={isResponsive}
-              >
-                <i className={isResponsive ? "fa fa-times" : "fa fa-bars"} aria-hidden="true"></i>
-              </button>
-            </li>
             {['HOME', 'ABOUT', 'PROJECTS', 'CONTACT'].map((item) => (
               <li key={item} className={isResponsive ? 'block m-0 w-full' : 'm-0 p-0'}>
                 <a

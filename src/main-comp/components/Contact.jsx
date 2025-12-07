@@ -76,64 +76,64 @@ const Contact = () => {
 
       {getStatusMessage()}
 
-      <form 
-        className="w-[90%] max-w-[600px] flex flex-col bg-contact-bg dark:bg-contact-bg-dark p-[40px_30px] rounded-[20px] my-12 mx-auto shadow-[0_20px_40px_rgba(0,0,0,0.1)] relative overflow-hidden before:content-[''] before:absolute before:top-0 before:left-0 before:right-0 before:h-[4px] before:bg-gradient-to-r before:from-[#112D4E] before:via-[#EDA911] before:to-[#112D4E]" 
-        ref={form} 
-        onSubmit={sendEmail} 
+      <form
+        className="w-[90%] max-w-[600px] flex flex-col bg-contact-bg dark:bg-contact-bg-dark p-[40px_30px] rounded-[20px] my-12 mx-auto "
+        ref={form}
+        onSubmit={sendEmail}
         data-aos="zoom-in"
         noValidate
       >
         <div className="mb-[25px] relative">
-          <input 
-            type="text" 
-            name="name" 
-            placeholder="Your Full Name" 
-            required 
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Full Name"
+            required
             aria-label="Your name"
             aria-describedby="name-error"
             className="w-full p-[15px_20px] border-[2px] border-white/20 rounded-[12px] bg-white/95 text-text-primary text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-text-secondary placeholder:font-normal focus:outline-none focus:border-text-primary focus:bg-white focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] focus:-translate-y-[2px] hover:border-[#112d4e80] hover:bg-white"
           />
         </div>
-        
+
         <div className="mb-[25px] relative">
-          <input 
-            type="email" 
-            name="email" 
-            placeholder="your.email@example.com" 
-            required 
+          <input
+            type="email"
+            name="email"
+            placeholder="your.email@example.com"
+            required
             aria-label="Your email address"
             aria-describedby="email-error"
             className="w-full p-[15px_20px] border-[2px] border-white/20 rounded-[12px] bg-white/95 text-text-primary text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-text-secondary placeholder:font-normal focus:outline-none focus:border-text-primary focus:bg-white focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] focus:-translate-y-[2px] hover:border-[#112d4e80] hover:bg-white"
           />
         </div>
-        
+
         <div className="mb-[25px] relative">
-          <input 
-            type="tel" 
-            name="phone" 
-            placeholder="Phone Number (Optional)" 
-            maxLength="10" 
+          <input
+            type="tel"
+            name="phone"
+            placeholder="Phone Number (Optional)"
+            maxLength="10"
             pattern="[0-9]{10}"
             aria-label="Your phone number (optional)"
             className="w-full p-[15px_20px] border-[2px] border-white/20 rounded-[12px] bg-white/95 text-text-primary text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-text-secondary placeholder:font-normal focus:outline-none focus:border-text-primary focus:bg-white focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] focus:-translate-y-[2px] hover:border-[#112d4e80] hover:bg-white"
           />
         </div>
-        
+
         <div className="mb-[25px] relative">
-          <textarea 
-            name="message" 
-            placeholder="Tell me about your project or how I can help you..." 
-            maxLength={150} 
-            required 
+          <textarea
+            name="message"
+            placeholder="Tell me about your project or how I can help you..."
+            maxLength={150}
+            required
             rows="4"
             aria-label="Your message"
             aria-describedby="message-error"
             className="w-full p-[15px_20px] border-[2px] border-white/20 rounded-[12px] bg-white/95 text-text-primary text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-text-secondary placeholder:font-normal focus:outline-none focus:border-text-primary focus:bg-white focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] focus:-translate-y-[2px] hover:border-[#112d4e80] hover:bg-white min-h-[120px] resize-y font-inherit leading-[1.6]"
           />
         </div>
-        
-        <button 
-          type="submit" 
+
+        <button
+          type="submit"
           className="bg-gradient-to-br from-[#112D4E] to-[#1a4a6b] text-white border-none p-[15px_40px] rounded-[25px] text-[18px] font-semibold cursor-pointer transition-all duration-300 mt-[20px] mx-auto min-w-[150px] relative overflow-hidden shadow-none hover:not:disabled:-translate-y-[3px] hover:not:disabled:shadow-[0_10px_25px_rgba(17,45,78,0.4)] active:-translate-y-[1px] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none before:content-[''] before:absolute before:top-0 before:left-[-100%] before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-[left] before:duration-500 hover:before:left-full flex justify-center items-center"
           disabled={isSubmitting}
           aria-label={isSubmitting ? "Sending message..." : "Send message"}

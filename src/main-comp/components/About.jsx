@@ -27,7 +27,7 @@ const About = () => {
   };
 
   return (
-    <div className="flex flex-col items-center bg-about-bg dark:bg-about-bg-dark pt-12 pb-20 relative w-[90%] md:w-[70%] lg:w-[80%] mx-auto rounded-[16px] my-12 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5px] border border-white/30" data-aos="fade-up">
+    <div className="flex flex-col items-center bg-black dark:bg-about-bg-dark pt-12 pb-20 relative w-[90%] md:w-[70%] lg:w-[80%] mx-auto rounded-[16px] my-12 shadow-[0_4px_30px_rgba(0,0,0,0.1)] backdrop-blur-[5px] border border-white/30" data-aos="fade-up">
       <div className="w-full text-center mb-8">
         <h2 className="text-[32px] md:text-[40px] font-bold tracking-[2px] mb-5 text-text-primary dark:text-white" id="about">
           ABOUT ME
@@ -68,8 +68,8 @@ const About = () => {
           </section>
         </div>
       </div>
-      <button 
-        className="mt-8 bg-[#112D4E] text-[18px] font-bold leading-[30px] px-10 py-3 rounded-[6px] border-none text-white cursor-pointer transition-all duration-300 tracking-[2px] hover:bg-[#112d4ee5] hover:-translate-y-[2px] shadow-md" 
+      <button
+        className="mt-8 bg-[#112D4E] text-[18px] font-bold leading-[30px] px-10 py-3 rounded-[6px] border-none text-white cursor-pointer transition-all duration-300 tracking-[2px] hover:bg-[#112d4ee5] hover:-translate-y-[2px] shadow-md"
         onClick={scrollToContact}
         aria-label="Contact me"
       >

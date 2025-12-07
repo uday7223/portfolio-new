@@ -18,20 +18,20 @@ export const ThemeProvider = ({ children }) => {
   });
 
   useEffect(() => {
+    console.log('Theme changed:', isDarkMode ? 'dark' : 'light');
     // Save theme preference to localStorage
     localStorage.setItem('theme', isDarkMode ? 'dark' : 'light');
     
-    // Apply theme to document body
+    // Apply theme to document element (html tag)
     if (isDarkMode) {
-      document.body.classList.add('dark-theme');
-      document.body.classList.remove('light-theme');
+      document.documentElement.classList.add('dark');
     } else {
-      document.body.classList.add('light-theme');
-      document.body.classList.remove('dark-theme');
+      document.documentElement.classList.remove('dark');
     }
   }, [isDarkMode]);
 
   const toggleTheme = () => {
+    console.log('Toggling theme from', isDarkMode);
     setIsDarkMode(prev => !prev);
   };
 

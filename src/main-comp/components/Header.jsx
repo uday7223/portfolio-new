@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full flex justify-between items-center px-5 py-2.5 bg-header-bg fixed top-0 z-[1000] text-white transition-all duration-1000 min-h-[70px] bg-black">
+      <header className="w-full flex justify-between items-center px-5 py-2.5 fixed top-0 z-[1000] text-foreground bg-background/95 backdrop-blur-md transition-all duration-1000 min-h-[70px] border-b border-border shadow-sm dark:shadow-none">
         <div className="flex items-center gap-8 flex-1">
           <a href="/" aria-label="Go to homepage">
             <img
@@ -54,31 +54,21 @@ const Header = () => {
               className="w-[50px] h-[50px] rounded-full transition-all duration-200 hover:shadow-[1px_1px_20px_0px_white]"
             />
           </a>
-          <p className="mb-0 m-0 no-underline bg-gradient-to-r from-yellow-400 via-white to-yellow-400 bg-[length:200%_auto] bg-[-100%_center] bg-clip-text text-transparent transition-[background-position] duration-500 whitespace-nowrap hover:bg-[0%_center]">
+          <p className="mb-0 m-0 no-underline text-foreground font-bold text-xl whitespace-nowrap">
             UDAY KUMAR N &nbsp; <i className="fa-solid fa-heart" aria-hidden="true"></i>
           </p>
         </div>
 
         <div className="flex-none">
-          <ul className={`list-none m-0 p-0 flex items-center gap-4 ${isResponsive
-            ? 'flex-col absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md rounded-b-[15px] shadow-[0_4px_20px_rgba(0,0,0,0.3)] py-5 z-[1000]'
+          <ul className={`list-none flex items-center gap-4 ${isResponsive
+            ? 'flex-col absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md rounded-b-[15px] shadow-lg py-5 pt-0 z-[1000] border-b border-border'
             : 'hidden md:flex'}`}>
-            <li className="md:hidden block w-full text-left">
-              <button
-                className="bg-transparent border-none text-white text-[20px] p-2.5 cursor-pointer rounded-[5px] transition-all duration-300 w-[40px] h-[40px] flex items-center justify-center z-[1001]"
-                onClick={toggleMenu}
-                aria-label="Toggle navigation menu"
-                aria-expanded={isResponsive}
-              >
-                <i className={isResponsive ? "fa fa-times" : "fa fa-bars"} aria-hidden="true"></i>
-              </button>
-            </li>
             {['HOME', 'ABOUT', 'PROJECTS', 'CONTACT'].map((item) => (
               <li key={item} className={isResponsive ? 'block m-0 w-full' : 'm-0 p-0'}>
                 <a
                   href={item === 'HOME' ? '/' : `#${item.toLowerCase()}`}
                   aria-label={`Go to ${item.toLowerCase()} section`}
-                  className={`no-underline bg-gradient-to-r from-yellow-400 via-white to-yellow-400 bg-[length:200%_auto] bg-[-100%_center] bg-clip-text text-transparent transition-[background-position] duration-400 px-4 py-2.5 rounded-[5px] hover:bg-[0%_center] ${isResponsive ? 'block text-center text-[16px] w-full py-4' : ''}`}
+                  className={`no-underline text-foreground font-medium px-4 py-2.5 rounded-[5px] hover:text-primary transition-colors duration-300 ${isResponsive ? 'block text-center text-[16px] w-full py-4' : ''}`}
                 >
                   {item}
                 </a>
@@ -104,7 +94,7 @@ const Header = () => {
       </header>
 
       {/* Social Media Sidebar - Hidden on mobile */}
-      <div className="hidden md:block absolute top-[35%] left-0 bg-white shadow-[0px_7px_29px_0px_rgba(100,100,111,0.2)] p-2 rounded-[10px] z-[900]">
+      <div className="hidden md:block absolute top-[35%] left-0 bg-background border border-border shadow-lg p-2 rounded-r-[10px] z-[900]">
         {socialMediaLinks.map((link, index) => (
           <div key={index} className="scale-200 p-4 cursor-pointer">
             {link.url && (
@@ -115,7 +105,7 @@ const Header = () => {
                 aria-label={`Visit ${link.name} profile`}
                 className="block hover:scale-110 transition-transform duration-200"
               >
-                <i className={link.icon} style={{ color: "#112d4e" }} aria-hidden="true"></i>
+                <i className={link.icon} style={{ color: "var(--foreground)" }} aria-hidden="true"></i>
               </a>
             )}
           </div>

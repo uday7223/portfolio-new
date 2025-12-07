@@ -63,12 +63,12 @@ const Contact = () => {
   };
 
   return (
-    <div className="flex flex-col items-center py-20 bg-white dark:bg-black" data-aos="fade-up">
+    <div className="flex flex-col items-center py-20 bg-background text-foreground" data-aos="fade-up">
       <div className="text-center mb-10 w-full">
-        <h2 className="text-[40px] font-bold leading-[60px] text-center mb-[30px] text-text-primary dark:text-white" id="contact">
+        <h2 className="text-[40px] font-bold leading-[60px] text-center mb-[30px] text-foreground" id="contact">
           CONTACT
         </h2>
-        <p className="text-[20px] font-medium leading-[35px] text-center mb-[30px] px-5 mx-5 text-text-secondary dark:text-gray-300 max-w-[800px] mx-auto">
+        <p className="text-[20px] font-medium leading-[35px] text-center mb-[30px] px-5 mx-5 text-muted-foreground max-w-[800px] mx-auto">
           Feel free to Contact me by submitting the form below and I will
           get back to you as soon as possible.
         </p>
@@ -77,7 +77,7 @@ const Contact = () => {
       {getStatusMessage()}
 
       <form
-        className="w-[90%] max-w-[600px] flex flex-col bg-contact-bg dark:bg-contact-bg-dark p-[40px_30px] rounded-[20px] my-12 mx-auto "
+        className="w-[90%] max-w-[600px] flex flex-col bg-card dark:bg-card p-[40px_30px] rounded-[20px] my-12 mx-auto shadow-lg border border-border"
         ref={form}
         onSubmit={sendEmail}
         data-aos="zoom-in"
@@ -91,7 +91,7 @@ const Contact = () => {
             required
             aria-label="Your name"
             aria-describedby="name-error"
-            className="w-full p-[15px_20px] border-[2px] border-white/20 rounded-[12px] bg-white/95 text-text-primary text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-text-secondary placeholder:font-normal focus:outline-none focus:border-text-primary focus:bg-white focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] focus:-translate-y-[2px] hover:border-[#112d4e80] hover:bg-white"
+            className="w-full p-[15px_20px] border-[2px] border-input rounded-[12px] bg-background text-foreground text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-muted-foreground placeholder:font-normal focus:outline-none focus:border-primary focus:bg-background focus:ring-1 focus:ring-primary focus:-translate-y-[2px] hover:border-primary/50"
           />
         </div>
 
@@ -103,7 +103,7 @@ const Contact = () => {
             required
             aria-label="Your email address"
             aria-describedby="email-error"
-            className="w-full p-[15px_20px] border-[2px] border-white/20 rounded-[12px] bg-white/95 text-text-primary text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-text-secondary placeholder:font-normal focus:outline-none focus:border-text-primary focus:bg-white focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] focus:-translate-y-[2px] hover:border-[#112d4e80] hover:bg-white"
+            className="w-full p-[15px_20px] border-[2px] border-input rounded-[12px] bg-background text-foreground text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-muted-foreground placeholder:font-normal focus:outline-none focus:border-primary focus:bg-background focus:ring-1 focus:ring-primary focus:-translate-y-[2px] hover:border-primary/50"
           />
         </div>
 
@@ -115,7 +115,7 @@ const Contact = () => {
             maxLength="10"
             pattern="[0-9]{10}"
             aria-label="Your phone number (optional)"
-            className="w-full p-[15px_20px] border-[2px] border-white/20 rounded-[12px] bg-white/95 text-text-primary text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-text-secondary placeholder:font-normal focus:outline-none focus:border-text-primary focus:bg-white focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] focus:-translate-y-[2px] hover:border-[#112d4e80] hover:bg-white"
+            className="w-full p-[15px_20px] border-[2px] border-input rounded-[12px] bg-background text-foreground text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-muted-foreground placeholder:font-normal focus:outline-none focus:border-primary focus:bg-background focus:ring-1 focus:ring-primary focus:-translate-y-[2px] hover:border-primary/50"
           />
         </div>
 
@@ -128,13 +128,13 @@ const Contact = () => {
             rows="4"
             aria-label="Your message"
             aria-describedby="message-error"
-            className="w-full p-[15px_20px] border-[2px] border-white/20 rounded-[12px] bg-white/95 text-text-primary text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-text-secondary placeholder:font-normal focus:outline-none focus:border-text-primary focus:bg-white focus:shadow-[0_0_20px_rgba(0,0,0,0.1)] focus:-translate-y-[2px] hover:border-[#112d4e80] hover:bg-white min-h-[120px] resize-y font-inherit leading-[1.6]"
+            className="w-full p-[15px_20px] border-[2px] border-input rounded-[12px] bg-background text-foreground text-[16px] font-medium transition-all duration-300 backdrop-blur-[10px] placeholder:text-muted-foreground placeholder:font-normal focus:outline-none focus:border-primary focus:bg-background focus:ring-1 focus:ring-primary focus:-translate-y-[2px] hover:border-primary/50 min-h-[120px] resize-y font-inherit leading-[1.6]"
           />
         </div>
 
         <button
           type="submit"
-          className="bg-gradient-to-br from-[#112D4E] to-[#1a4a6b] text-white border-none p-[15px_40px] rounded-[25px] text-[18px] font-semibold cursor-pointer transition-all duration-300 mt-[20px] mx-auto min-w-[150px] relative overflow-hidden shadow-none hover:not:disabled:-translate-y-[3px] hover:not:disabled:shadow-[0_10px_25px_rgba(17,45,78,0.4)] active:-translate-y-[1px] disabled:opacity-70 disabled:cursor-not-allowed disabled:transform-none before:content-[''] before:absolute before:top-0 before:left-[-100%] before:w-full before:h-full before:bg-gradient-to-r before:from-transparent before:via-white/20 before:to-transparent before:transition-[left] before:duration-500 hover:before:left-full flex justify-center items-center"
+          className="bg-primary text-primary-foreground border-none p-[15px_40px] rounded-[25px] text-[18px] font-semibold cursor-pointer transition-all duration-300 mt-[20px] mx-auto min-w-[150px] relative overflow-hidden shadow-md hover:not:disabled:-translate-y-[3px] hover:not:disabled:shadow-lg active:-translate-y-[1px] disabled:opacity-70 disabled:cursor-not-allowed flex justify-center items-center"
           disabled={isSubmitting}
           aria-label={isSubmitting ? "Sending message..." : "Send message"}
         >

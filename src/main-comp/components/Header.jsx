@@ -45,7 +45,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="w-full flex justify-between items-center px-5 py-2.5 bg-header-bg fixed top-0 z-[1000] text-white transition-all duration-1000 min-h-[70px] bg-black">
+      <header className="w-full flex justify-between items-center px-5 py-2.5 fixed top-0 z-[1000] text-foreground bg-background/95 backdrop-blur-md transition-all duration-1000 min-h-[70px] border-b border-border shadow-sm dark:shadow-none">
         <div className="flex items-center gap-8 flex-1">
           <a href="/" aria-label="Go to homepage">
             <img
@@ -61,7 +61,7 @@ const Header = () => {
 
         <div className="flex-none">
           <ul className={`list-none flex items-center gap-4 ${isResponsive
-            ? 'flex-col absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md rounded-b-[15px] shadow-[0_4px_20px_rgba(0,0,0,0.3)] py-5 pt-0 z-[1000]'
+            ? 'flex-col absolute top-full left-0 right-0 bg-background/95 backdrop-blur-md rounded-b-[15px] shadow-lg py-5 pt-0 z-[1000] border-b border-border'
             : 'hidden md:flex'}`}>
             {['HOME', 'ABOUT', 'PROJECTS', 'CONTACT'].map((item) => (
               <li key={item} className={isResponsive ? 'block m-0 w-full' : 'm-0 p-0'}>
@@ -94,7 +94,7 @@ const Header = () => {
       </header>
 
       {/* Social Media Sidebar - Hidden on mobile */}
-      <div className="hidden md:block absolute top-[35%] left-0 bg-white shadow-[0px_7px_29px_0px_rgba(100,100,111,0.2)] p-2 rounded-[10px] z-[900]">
+      <div className="hidden md:block absolute top-[35%] left-0 bg-background border border-border shadow-lg p-2 rounded-r-[10px] z-[900]">
         {socialMediaLinks.map((link, index) => (
           <div key={index} className="scale-200 p-4 cursor-pointer">
             {link.url && (
@@ -105,7 +105,7 @@ const Header = () => {
                 aria-label={`Visit ${link.name} profile`}
                 className="block hover:scale-110 transition-transform duration-200"
               >
-                <i className={link.icon} style={{ color: "#112d4e" }} aria-hidden="true"></i>
+                <i className={link.icon} style={{ color: "var(--foreground)" }} aria-hidden="true"></i>
               </a>
             )}
           </div>

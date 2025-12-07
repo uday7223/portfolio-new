@@ -38,10 +38,10 @@ const Projects = () => {
   ];
 
   return (
-    <div className="flex flex-col items-center py-20 px-5 bg-white dark:bg-black" data-aos="fade-up">
+    <div className="flex flex-col items-center py-20 px-5 bg-background text-foreground" data-aos="fade-up">
       <div className="text-center mb-16">
-        <h2 className="text-[40px] font-bold leading-[60px] text-center mb-[30px] text-text-primary dark:text-white" id="projects">PROJECTS</h2>
-        <p className="text-[20px] font-medium leading-[35px] text-center mb-[30px] px-5 mx-2 text-text-secondary dark:text-gray-300 max-w-[800px] mx-auto">
+        <h2 className="text-[40px] font-bold leading-[60px] text-center mb-[30px] text-foreground" id="projects">PROJECTS</h2>
+        <p className="text-[20px] font-medium leading-[35px] text-center mb-[30px] px-5 mx-2 text-muted-foreground max-w-[800px] mx-auto">
           Here you will find some of the personal projects that I created
           with each project containing its own live preview!
         </p>
@@ -54,12 +54,12 @@ const Projects = () => {
               src={project.image} 
               alt={`Screenshot of ${project.title} project`}
               loading="lazy"
-              className="w-full md:w-[30rem] h-auto md:h-[18rem] shadow-[0px_0px_40px_5px_rgba(0,0,0,0.25)] rounded-[8px] mx-auto block object-cover"
+              className="w-full md:w-[30rem] h-auto md:h-[18rem] shadow-lg dark:shadow-none rounded-[8px] mx-auto block object-cover"
             />
           </div>
           <div className="w-full xl:w-1/2 flex flex-col items-center xl:items-start text-center xl:text-left px-4">
-            <h3 className="text-[28px] font-bold my-2 text-text-primary dark:text-white">{project.title}</h3>
-            <p className="text-[18px] font-normal my-2 text-text-secondary dark:text-gray-300 leading-relaxed max-w-[600px]">{project.description}</p>
+            <h3 className="text-[28px] font-bold my-2 text-foreground">{project.title}</h3>
+            <p className="text-[18px] font-normal my-2 text-muted-foreground leading-relaxed max-w-[600px]">{project.description}</p>
             <div className="flex flex-wrap justify-center xl:justify-start gap-2 my-[15px]">
               {project.technologies.map((tech, techIndex) => (
                 <span key={techIndex} className="bg-gradient-to-br from-[#667eea] to-[#764ba2] text-white px-3 py-1.5 rounded-[20px] text-[12px] font-semibold uppercase tracking-wider shadow-sm transition-all duration-300 hover:-translate-y-[2px] hover:shadow-md">
@@ -69,7 +69,7 @@ const Projects = () => {
             </div>
             <a
               href={project.link}
-              className="bg-[#112D4E] text-[20px] font-bold leading-[30px] w-full max-w-[200px] h-[50px] flex items-center justify-center rounded-[6px] border-none text-white my-2 cursor-pointer transition-transform duration-100 ease-out tracking-[5px] hover:bg-[#112d4ee5] hover:-translate-y-[2px] hover:text-white no-underline mt-5"
+              className="bg-primary text-primary-foreground text-[20px] font-bold leading-[30px] w-full max-w-[200px] h-[50px] flex items-center justify-center rounded-[6px] border-none my-2 cursor-pointer transition-transform duration-100 ease-out tracking-[5px] hover:bg-primary/90 hover:-translate-y-[2px] no-underline mt-5"
               target="_blank"
               rel="noopener noreferrer"
               aria-label={`View live ${project.title} project`}

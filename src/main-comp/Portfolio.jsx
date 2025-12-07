@@ -16,8 +16,8 @@ const Portfolio = () => {
 
   return (
     <ThemeProvider>
-      <div className="flex flex-col relative bg-black dark:bg-hero-bg-dark">
-        <div className="h-screen flex flex-col items-center bg-black dark:bg-hero-bg-dark relative overflow-hidden" data-aos="fade-up">
+      <div className="flex flex-col relative dark:bg-hero-bg-dark">
+        <div className="h-screen flex flex-col items-center dark:bg-hero-bg-dark relative overflow-hidden" data-aos="fade-up">
           <GridBackground />
           <Header />
           <Hero />
